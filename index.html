@@ -46,7 +46,23 @@
                 </ul>
             </section>
         </div>
+const projects = [
+  // ...other projects,
+  {
+    title: "Dominion Chemical Mockups",
+    description: "Waxes, emulsions, and specialty chemicals for diverse industries.",
+    url: "https://jgott90.github.io/dominion-chemical-mockups/",
+  }
+];
 
+// In your render code
+{projects.map(proj => (
+  <div className="project-card" key={proj.title}>
+    <h2>{proj.title}</h2>
+    <p>{proj.description}</p>
+    <a href={proj.url} target="_blank" rel="noopener">Visit Project</a>
+  </div>
+))}
 
         <!-- Footer -->
         <footer id="footer">
